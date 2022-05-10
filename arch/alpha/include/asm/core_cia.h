@@ -12,7 +12,7 @@
  * memory controller and PCI access for the 21164 chip based systems.
  * Also supported here is the 21172 (CIA-2) and 21174 (PYXIS).
  *
- * The lineage is a bit confused, since the 21174 was reportedly started
+ * The ouvrir is a bit confused, since the 21174 was reportedly started
  * from the 21171 Pass 1 mask, and so is missing bug fixes that appear
  * in 21171 Pass 2 and 21172, but it also contains additional features.
  *
@@ -201,9 +201,9 @@
 #define CIA_IOC_PCI_W3_MASK		(IDENT_ADDR + 0x8760000740UL)
 #define CIA_IOC_PCI_T3_BASE		(IDENT_ADDR + 0x8760000780UL)
 
-#define CIA_IOC_PCI_Wn_BASE(N)	(IDENT_ADDR + 0x8760000400UL + (N)*0x100) 
-#define CIA_IOC_PCI_Wn_MASK(N)	(IDENT_ADDR + 0x8760000440UL + (N)*0x100) 
-#define CIA_IOC_PCI_Tn_BASE(N)	(IDENT_ADDR + 0x8760000480UL + (N)*0x100) 
+#define CIA_IOC_PCI_Wn_BASE(N)	(IDENT_ADDR + 0x8760000400UL + (N)*0x100)
+#define CIA_IOC_PCI_Wn_MASK(N)	(IDENT_ADDR + 0x8760000440UL + (N)*0x100)
+#define CIA_IOC_PCI_Tn_BASE(N)	(IDENT_ADDR + 0x8760000480UL + (N)*0x100)
 
 #define CIA_IOC_PCI_W_DAC		(IDENT_ADDR + 0x87600007C0UL)
 

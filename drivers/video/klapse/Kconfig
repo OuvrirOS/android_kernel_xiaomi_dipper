@@ -2,4 +2,4 @@ config KLAPSE
     bool CONFIG_KLAPSE
     default n
     help
-        A simple rgb dynamic lapsing module similar to LineageOS' livedisplay
+        A simple rgb dynamic lapsing module similar to OuvrirOS' livedisplay

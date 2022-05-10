@@ -1,10 +1,10 @@
 /*
- * Driver for Lineage Compact Power Line series of power entry modules.
+ * Driver for Ouvrir Compact Power Line series of power entry modules.
  *
  * Copyright (C) 2010, 2011 Ericsson AB.
  *
  * Documentation:
- *  http://www.lineagepower.com/oem/pdf/CPLI2C.pdf
+ *  http://www.ouvrirpower.com/oem/pdf/CPLI2C.pdf
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@
 #include <linux/jiffies.h>
 
 /*
- * This driver supports various Lineage Compact Power Line DC/DC and AC/DC
+ * This driver supports various Ouvrir Compact Power Line DC/DC and AC/DC
  * converters such as CP1800, CP2000AC, CP2000DC, CP2100DC, and others.
  *
  * The devices are nominally PMBus compliant. However, most standard PMBus
@@ -40,7 +40,7 @@
  * status reporting commands are non-standard. For this reason, a standard
  * PMBus driver can not be used.
  *
- * All Lineage CPL devices have a built-in I2C bus master selector (PCA9541).
+ * All Ouvrir CPL devices have a built-in I2C bus master selector (PCA9541).
  * To ensure device access, this driver should only be used as client driver
  * to the pca9541 I2C master selector driver.
  */
@@ -527,14 +527,14 @@ static int pem_probe(struct i2c_client *client,
 }
 
 static const struct i2c_device_id pem_id[] = {
-	{"lineage_pem", 0},
+	{"ouvrir_pem", 0},
 	{}
 };
 MODULE_DEVICE_TABLE(i2c, pem_id);
 
 static struct i2c_driver pem_driver = {
 	.driver = {
-		   .name = "lineage_pem",
+		   .name = "ouvrir_pem",
 		   },
 	.probe = pem_probe,
 	.id_table = pem_id,
@@ -543,5 +543,5 @@ static struct i2c_driver pem_driver = {
 module_i2c_driver(pem_driver);
 
 MODULE_AUTHOR("Guenter Roeck <linux@roeck-us.net>");
-MODULE_DESCRIPTION("Lineage CPL PEM hardware monitoring driver");
+MODULE_DESCRIPTION("Ouvrir CPL PEM hardware monitoring driver");
 MODULE_LICENSE("GPL");
